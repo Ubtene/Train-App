@@ -70,13 +70,37 @@ line-height: 35px;
 
 }
 
+
+.table td:nth-child(6) {
+
+
+    padding-right: -20%;
+
+}
+
+
+
 .table th:nth-child(1) {
 
 padding-left: 2.3%;
 
+}
+
+
+.table th:nth-child(2) {
+
+    padding-left: 2.3%;
+
+}
+
+.table th:nth-child(4) {
+
+    padding-left: 2.3%;
 
 
 }
+
+
 
     
     .final {
@@ -129,6 +153,7 @@ padding-left: 2.3%;
 
 
     }
+
 
 @media all and (max-width: 850px) {
 
