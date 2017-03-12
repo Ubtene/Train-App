@@ -26,14 +26,16 @@ function checkTime(i) {
     return i;
 }
 
-
 startTime();
 
  var database = firebase.database();
 
  var diffTime = "";
 
+
  database.ref().on("child_added", function(snapshot) {
+
+var counter = snapshot.val().Minutes;	
 
 
      $(".table tbody").append("<tr>");
@@ -46,13 +48,16 @@ startTime();
 
      $(".table tbody").append("<td>" + snapshot.val().Display + "</td>");
 
-     $(".table tbody").append("<td>" + snapshot.val().Minutes + "</td>");
+     $(".table tbody").append("<td>" + counter + "</td>");
 
      $(".table tbody").append("</tr>");
 
 
+
+
  });
     
+
 
 $(".button").on("click", function(event) {
 
@@ -90,21 +95,9 @@ $(".button").on("click", function(event) {
 
      nextTrainTime = frequencyVariable - tRemainder;
 
-     console.log(diffTime);
-
-     console.log(totalTimeElapsed);
-
-     console.log(tRemainder);
-
-     console.log(nextTrainTime);
-
      var preDisplayedTime = moment().add(nextTrainTime, "minutes");
 
-     console.log(preDisplayedTime);
-
      var displayedTime = moment(preDisplayedTime).format("hh:mm a");
-
-     console.log(displayedTime);
 
 
      database.ref().push({

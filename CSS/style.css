@@ -5,26 +5,29 @@
     }
     
     .jumbotron {
-        margin-top: 0;
-        padding-top: 30px;
-        padding-bottom: 30px;
+        
+        position: relative;
+        right:1%;
         background-color: #b11b1b;
         color: white;
         text-align: center;
         font-size: 30px;
         font-family: arial;
-
+        
     }
     
+
+
+
     
     .clock {
-        /*font-family: 'Orbitron' , sans-serif; */
+          
         color:black;
-        font-size: 40px;
-        margin-left: 40%;
-        margin-bottom:3%;
-        display: inline-block;
-        
+        font-family: serif;
+        margin-top:5%;
+        padding-left: 6%;
+        font-size: 60px;
+      
     }
 
     .panel-heading {
@@ -54,15 +57,23 @@
     .panel2 {
         margin-top: 20px;
         border: 0.5px solid #20315a ;
-        height: 560px;
+        height: 545px;
     }
     
 
 .table td {
 padding-top: 5px;    
-padding-left: 10px;
+padding-left: 30px;
 font-size: 20px;
 line-height: 35px;
+
+
+}
+
+.table th:nth-child(1) {
+
+padding-left: 2.3%;
+
 
 
 }
@@ -118,3 +129,22 @@ line-height: 35px;
 
 
     }
+
+@media all and (max-width: 850px) {
+
+
+.clock {
+
+    margin-left: 18%;
+    position: relative;
+    bottom: 4vh;
+
+
+}
+
+.extend {
+
+    width:200px;
+}
+
+}   
